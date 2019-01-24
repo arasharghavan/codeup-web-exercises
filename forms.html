@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register With Us</title>
 </head>
 <body>
-
+        <form action="https://www.elformo.com/forms/9265c2c8-1c33-43b4-9110-4e37c31b3502" method="post">
+            <div>
+                <label for="email">E-mail adress</label>
+                <input required id="email" name="email" type="email" placeholder="your E-mail here" >
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Please enter password" >
+            </div>
+            <div>
+                <label for="bio" >Bio</label><br>
+                <textarea id="bio" name="bio" rows="5" cols="40" placeholder="short description of you!" ></textarea>
+            </div>
+            <hr>
+            <div>
+                <label><input type="radio" name="q1" value="billboard">billboard</label>
+                <label><input type="radio" name="q2" value="radio advertisement">radio advertisement</label>
+                <label><input type="radio" name="q3" value="internet advertisement">internet advertisement</label>
+                <label><input type="radio" name="q4" value="other">other</label>
+            </div>
+            <div>
+                <label for="web browser">What web browser you are using?</label>
+                <select id="web browser" name="web browser?" >
+                <option value="fire fox">Fire Fox</option>
+                <option value="google">Google</option>
+                <option value="safari">Safari</option>
+                </select>
+            </div>
+            <hr>
+            <button>Send</button>
+        </form>
 </body>
 </html>
