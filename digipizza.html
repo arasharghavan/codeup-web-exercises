@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>DigiPizza</title>
 </head>
 <body>
-
+        <h1>*****Welcome to DigiPizza*****</h1>
+        <input type="hidden" name="user" value="X.usr">
+        <p>
+            <strong> DigiPizza </strong>is an American restaurant chain and international franchise founded in<strong>1958</strong><br> by Dan
+            and <em>Fran Carney</em>. The company is known for its <em>Italian-American</em> cuisine menu,<br> including pizza and pasta, as
+            well as side dishes and desserts.
+        </p>
+        <hr>
+        <form>
+            <fieldset>
+            <legend><h2>**Lets do the topping!**</h2></legend>
+              <label><input type="checkbox" name="topping" value="topping1" >topping1</label>
+              <label><input type="checkbox" name="topping" value="topping2" >topping2</label>
+              <label><input type="checkbox" name="topping" value="topping3" >topping3</label>
+            </fieldset>
+            <fieldset>
+                <legend><h2>**How hungry you are?**</h2></legend>
+                <label for="size">What size is good for you?</label>
+                <select id="size" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </fieldset>
+            <fieldset>
+            <legend><h2>Do you want it delivered?</h2></legend>
+            <label><input type="radio" name="delivery" value="yes">My Home</label>
+            <label><input type="radio" name="delivery" value="no">In Store</label>
+            </fieldset>
+            <fieldset>
+                <legend><h2>How about joining us and get free PIZZA?</h2></legend>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="E-mail here!" required>
+                <label for="password">Password</label>
+                 <input id="password" name="password" type="password" placeholder="password here!">
+            </fieldset>
+                <br>
+            <button>Order</button>
+        </form>
 </body>
 </html>
+
+
+
+
+
