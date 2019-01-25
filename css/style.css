@@ -1,0 +1,29 @@
+
+.main-heading {
+    text-indent: 30%;
+}
+h1 {
+    color: #00f;
+    text-decoration: underline;
+}
+body {
+    background-color: #ffd700;
+    background-image: url("../img/transparent-background.jpg");
+    background-repeat: repeat;
+    font-family: 'Major Mono Display', monospace;
+}
+li {
+    list-style: square;
+}
+td {
+    font-size: large; background-color: #ff8c00;
+}
+tr {
+    font-size: medium; background-color: #006400;
+}
+a:hover {
+    color: #ff0000;
+}
+a:active {
+    color: #000;
+}
