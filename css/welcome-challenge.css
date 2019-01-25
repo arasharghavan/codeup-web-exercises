@@ -1,0 +1,39 @@
+body {
+    background-color: #a4cbcb;
+}
+h1 {
+    color: #371480;
+    font-weight: bold; font-size: x-large;
+    text-align: center;
+}
+p,li,td {
+    font-size: x-small;
+    color: blue;
+    font-family: "American Typewriter";
+}
+
+h2 {
+    color: darkolivegreen;
+    font-size: small;
+    font-family: "American Typewriter";
+    font-weight: lighter;
+}
+main>section:nth-child(2) {
+    background-color: aliceblue;
+}
+
+section:nth-child(1)>ul {
+    text-decoration: underline;
+}
+h1 {
+    background-color: aliceblue; border-radius: 50px;
+}
+img {
+    transform: rotate(10deg);
+}
+main section:nth-child(5) h2 {
+    text-align: center;
+}
+h1 {
+    text-shadow: 2px 2px; color: #371480;
+}
