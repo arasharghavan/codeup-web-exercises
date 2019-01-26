@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>DigiPizza</title>
+    <link rel="stylesheet" href="css/digipizza.css">
 </head>
 <body>
-        <h1>*****Welcome to DigiPizza*****</h1>
-        <input type="hidden" name="user" value="X.usr">
+        *****<em class="head">Welcome to DigiPizza</em>*****
+        <input type="hidden" value="X-user" name="user">
         <p>
-            <strong> DigiPizza </strong>is an American restaurant chain and international franchise founded in<strong>1958</strong><br> by Dan
+            <strong> DigiPizza </strong>is an American restaurant chain and international franchise founded in<strong>1958</strong><br> by <em>Dan</em>
             and <em>Fran Carney</em>. The company is known for its <em>Italian-American</em> cuisine menu,<br> including pizza and pasta, as
             well as side dishes and desserts.
         </p>
         <hr>
-        <form>
-            <fieldset>
-            <legend><h2>**Lets do the topping!**</h2></legend>
+        <form action="https://request-inspector.glitch.me/" method="post">
+            <fieldset class="topping"><img src="img/slice-pizza.jpg" alt="pizza"><img src="img/slice-pizza.jpg" alt="pizza"><img src="img/slice-pizza.jpg" alt="pizza">
+            <legend><h2>****Lets do the topping!****</h2></legend>
               <label><input type="checkbox" name="topping" value="topping1" >topping1</label>
               <label><input type="checkbox" name="topping" value="topping2" >topping2</label>
               <label><input type="checkbox" name="topping" value="topping3" >topping3</label>
             </fieldset>
-            <fieldset>
-                <legend><h2>**How hungry you are?**</h2></legend>
+            <fieldset class="size"><img src="img/slice-pizza.jpg" alt="pizza"><img src="img/slice-pizza.jpg" alt="pizza"><img src="img/slice-pizza.jpg" alt="pizza">
+                <legend><h2>***How hungry are you?***</h2></legend>
                 <label for="size">What size is good for you?</label>
                 <select id="size" name="size">
                     <option value="small">Small</option>
@@ -29,19 +30,22 @@
                     <option value="large">Large</option>
                 </select>
             </fieldset>
-            <fieldset>
-            <legend><h2>Do you want it delivered?</h2></legend>
+            <fieldset class="deliver"><img src="img/slice-pizza.jpg" alt="pizza"><img src="img/slice-pizza.jpg" alt="pizza">
+            <legend><h2>**Do you want it delivered?**</h2></legend>
             <label><input type="radio" name="delivery" value="yes">My Home</label>
             <label><input type="radio" name="delivery" value="no">In Store</label>
             </fieldset>
-            <fieldset>
-                <legend><h2>How about joining us and get free PIZZA?</h2></legend>
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" placeholder="E-mail here!" required>
-                <label for="password">Password</label>
-                 <input id="password" name="password" type="password" placeholder="password here!">
+            <fieldset class="finish">
+                <legend><h2>*Lets Finish The Order*</h2></legend>
+                <label for="address">Address:</label>
+                <input class="address" id="address" name="address" type="text" placeholder="Address*" required><br>
+                <label for="resident">Apt/Suite/Bldg:</label>
+                <input id="resident" name="resident" type="text" placeholder="Apt/Suite/Bldg"><br>
+                <label for="city" ></label><input id="city" name="city" type="text" placeholder="City*" required>
+                <label for="zipcode"></label><input id="zipcode" name="zip" placeholder="Zip*" type="text" required>
             </fieldset>
                 <br>
+            <img class="moving-gif" src="https://media.tenor.com/images/aa052d4698b047631f91cbafaaa54b0c/tenor.gif" alt="pizzaman" >
             <button>Order</button>
         </form>
 </body>
