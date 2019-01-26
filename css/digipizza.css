@@ -1,0 +1,47 @@
+body {
+    background-image: url("../img/basil-leaves.jpg");
+    background-size: cover;
+}
+.head {
+    font-weight: lighter; font-size: xx-large;
+}
+em {
+    color: #00009c;
+}
+strong {
+    color: #750e44;
+}
+h2 {
+    color: #4f43ff;
+}
+img {
+    width: 50px; height: 50px; margin-right: 40px;
+
+}
+fieldset {
+    margin-right: 40%;
+}
+.address {
+    margin-left: 45px;
+}
+.topping {
+    background: #fff7ae;
+}
+.size {
+    background-color: #a3d87d;
+}
+.deliver {
+    background-color: #ff784d;
+}
+.finish {
+    background-color: #c4c4c4;
+}
+input ,fieldset ,button {
+    border-radius: 10px;
+}
+button{
+    height: 40px;background-color: darkred; font-weight: bolder;
+}
+.moving-gif{
+    margin: 0px;
+}
