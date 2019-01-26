@@ -6,7 +6,7 @@ h1 {
     font-weight: bold; font-size: x-large;
     text-align: center;
 }
-p,li,td {
+p,li,td,th,a {
     font-size: x-small;
     color: blue;
     font-family: "American Typewriter";
@@ -30,10 +30,11 @@ h1 {
 }
 img {
     transform: rotate(10deg);
+
 }
 main section:nth-child(5) h2 {
     text-align: center;
 }
 h1 {
-    text-shadow: 2px 2px; color: #371480;
+    text-shadow: 2px 1px #f145e6;
 }
