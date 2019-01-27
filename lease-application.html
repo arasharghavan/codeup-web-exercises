@@ -2,9 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>E-form-application</title>
+    <link href="css/lease-application.css" rel="stylesheet">
 </head>
 <body>
+    <form action="https://request-inspector.glitch.me" method="post">
+    <p class="p-date">
+        <label for="date">Received on</label>
+        <input id="date" name="date" type="number">
+        <label for="time">(date) at</label>
+        <input id="time" name="time" type="number">(time)
+    </p>
+        <img src="img/TAR-logo.png" alt="tar-logo">
+        <p class="center">Texas Association of Realtors</p>
+        <p class="center bold" >RESIDENTIAL LEASE APPLICATION</p>
+        <P class="center small">use of this form by person who are not members of the TEXAS ASSOCIATION of realtors is not Authorised</P>
+        <p class="center small">Texas Association of REALTORS,inc.2007</p>
+        <p class="center medium">Each occupant and co-applicant 18 years or older must submit a separate application.</p>
+        <hr>
+    <section>
+
+        <label for="p-address">Property Address:</label>
+        <input class="p-address" id="p-address" type="text" name="p-address"><br>
+        <label class="indent" for="move-in-date">Anticipated:Move-in Date:</label>
+        <input id="move-in-date" name="move-in-date" type="number">
+        <label for="rent">Monthly Rent:$</label>
+        <input id="rent" type="number" name="rent">
+        <label for="deposit">Security Deposit:$</label>
+        <input id="deposit" name="deposit" type="number">
+
+        <p class="margin-bottom">Application was referred to landlord by:</p>
+        <label class="indent"><input type="checkbox" name="agent?" value="yes">Real estate agent</label>
+        <label><input class="long-name" name="agent-name" type="text">(name)</label>
+        <input id="agent-phone" name="agent-phone" type="number">
+        <label for="agent-phone">(phone)</label><br>
+        <label class="indent"><input name="newspaper" type="checkbox" value="yes">Newspaper</label>
+        <label><input name="sign" type="checkbox" value="yes">Sign</label>
+        <label><input name="internet" type="checkbox" value="yes">Internet</label>
+        <label><input name="other" type="checkbox" value="yes">Other</label>
+        <label class="long-name"><input class="long-name" type="text" name="other"></label><br>
+
+        <label for="app-name">Applicant's name(first,middle,last)</label>
+        <input class="long-name" id="app-name" name="app-name" type="text"><br>
+        <label class="indent">Is there a co-applicant?</label>
+        <label><input name="co-app" value="yes" type="radio">yes</label>
+        <label><input name="co-app" value="no" type="radio">no</label>
+        <em>if yes,co-applicant must submit a separate application.</em><br>
+        <label class="indent" for="former-L-name">Applicant's former last name(maiden or married)</label>
+        <input class="long-name" id="former-L-name" type="text" name="former-L-name"><br>
+
+        <label for="email">E-mail</label>
+        <input class="long-name" id="email" type="email" name="email">
+        <label for="h-phone">Home phone</label>
+        <input class="long-name" id="h-phone" type="number" name="h-phone"><br>
+        <label for="w-phone">Work Phone</label>
+        <input class="long-name" id="w-phone" type="number" name="w-phone">
+        <label for="mobil">Mobile/Pager</label>
+        <input class="long-name" id="mobil" type="number" name="mobil"><br>
+        <label for="ssn">Soc.Sec.No.</label>
+        <input class="long-name" id="ssn" type="number" name="ssn">
+        <label for="dl">Driver License No.</label>
+        <input id="dl" type="number" name="dl">
+        <label for="state">in</label>
+        <input id="state" type="text" name="state">(state)<br>
+        <label for="dob">Date of Birth</label>
+        <input id="dob" type="number" name="dob">
+        <label for="height">Height</label>
+        <input id="height" type="number" name="height">
+        <label for="weight">Weight</label>
+        <input id="weight" type="number" name="weight">
+        <label for="eye">Eye Color</label>
+        <input id="eye" type="text" name="eye"><br>
+        <label for="hair">Hair Color</label>
+        <input id="hair" type="text" name="hair">
+        <label for="mstatus">Marital Status</label>
+        <input class="long-name" id="mstatus" type="text" name="mstatus">
+        <label for="citizen">Citizenship</label>
+        <input id="citizen" type="text" name="citizen">(country)<br>
+
+        <p>Emergency Contact:
+            <label for="e-name">Name:</label>
+            <input class="long-name" id="e-name" type="text" name="e-name"><br>
+            <label class="indent2" for="e-address">Address:</label>
+            <input class="long-name" id="e-address" type="text" name="e-address"><br>
+            <label class="indent2" for="e-number">Phone:</label>
+            <input class="long-name" id="e-number" type="number" name="e-number">
+            <label for="ee-mail">E-mail</label>
+            <input class="long-name" id="ee-mail" type="text" name="ee-mail"><br>
+        </p>
+        <p>
+            Name all other person who will occupy the Property:<br>
+            <label for="occ-person">Name:</label>
+            <input class="long-name" id="occ-person" type="text" name="occ-person-1">
+            <label for="occ-relation">Relationship:</label>
+            <input id="occ-relation" type="text" name="occ-relation-1">
+            <label for="occ-age">Age:</label>
+            <input id="occ-age" type="number" name="occ-age-1"><br>
+            <label for="occ-person">Name:</label>
+            <input class="long-name" id="occ-person2" type="text" name="occ-person-2">
+            <label for="occ-relation">Relationship:</label>
+            <input id="occ-relation2" type="text" name="occ-relation-2">
+            <label for="occ-age">Age:</label>
+            <input id="occ-age2" type="number" name="occ-age-2"><br>
+            <label for="occ-person">Name:</label>
+            <input class="long-name" id="occ-person3" type="text" name="occ-person-3">
+            <label for="occ-relation">Relationship:</label>
+            <input id="occ-relation3" type="text" name="occ-relation-3">
+            <label for="occ-age">Age:</label>
+            <input id="occ-age3" type="number" name="occ-age-3"><br>
+            <label for="occ-person">Name:</label>
+            <input class="long-name" id="occ-person4" type="text" name="occ-person-4">
+            <label for="occ-relation">Relationship:</label>
+            <input id="occ-relation4" type="text" name="occ-relation-4">
+            <label for="occ-age4">Age:</label>
+            <input id="occ-age4" type="number" name="occ-age-4"><br>
+        </p>
+
+
+
+
+
+        <br>
+        <button>send</button>
+    </section>
+    </form>
 
 </body>
 </html>
