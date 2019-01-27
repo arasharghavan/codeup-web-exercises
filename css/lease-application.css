@@ -1,11 +1,12 @@
 input{
     border-top: 0px; border-left: 0px; border-right: 0px;
+    cursor: auto;
 }
 .p-date{
-    float: right;
+    float: right; margin-right: 250px;
 }
 img{
-    margin-top: 30px; margin-left: 47%;
+    margin-top: 0px; margin-left: 47%;
 }
 .center{
     text-align: center; margin: 0px;
@@ -23,7 +24,7 @@ hr{
     border: solid 2px; margin-bottom: 10px; margin-left: 320px; margin-right: 320px;
 }
 .p-address{
-    width: 720px;
+    width: 700px;
 }
 .indent{
     margin-left: 50px;
@@ -42,4 +43,21 @@ em{
 }
 .indent2{
     margin-left: 80px;
+}
+button{
+    color: blue;background-color: #b1b1b1; border-radius: 10px;
+    border: solid; box-shadow: 2px 2px #5d88ff;
+
+}
+h6{
+    margin: 10px;
+}
+.shadow{
+    box-shadow: 2px 2px gray; border-radius: 3px;
+}
+button:hover {
+    border-top-color: #5d88ff;
+    background: #b1b1b1;
+    color: #5d88ff;
+
 }

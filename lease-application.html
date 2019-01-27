@@ -6,6 +6,7 @@
     <link href="css/lease-application.css" rel="stylesheet">
 </head>
 <body>
+<!--head--------------------------------------------------------------------------------------------------------------->
     <form action="https://request-inspector.glitch.me" method="post">
     <p class="p-date">
         <label for="date">Received on</label>
@@ -20,6 +21,7 @@
         <p class="center small">Texas Association of REALTORS,inc.2007</p>
         <p class="center medium">Each occupant and co-applicant 18 years or older must submit a separate application.</p>
         <hr>
+<!--Property Address--------------------------------------------------------------------------------------------------->
     <section>
 
         <label for="p-address">Property Address:</label>
@@ -30,23 +32,23 @@
         <input id="rent" type="number" name="rent">
         <label for="deposit">Security Deposit:$</label>
         <input id="deposit" name="deposit" type="number">
-
+<!--Application was referred to landlord by---------------------------------------------------------------------------->
         <p class="margin-bottom">Application was referred to landlord by:</p>
-        <label class="indent"><input type="checkbox" name="agent?" value="yes">Real estate agent</label>
+        <label class="indent"><input class="shadow" type="checkbox" name="agent?" value="yes">Real estate agent</label>
         <label><input class="long-name" name="agent-name" type="text">(name)</label>
         <input id="agent-phone" name="agent-phone" type="number">
         <label for="agent-phone">(phone)</label><br>
-        <label class="indent"><input name="newspaper" type="checkbox" value="yes">Newspaper</label>
-        <label><input name="sign" type="checkbox" value="yes">Sign</label>
-        <label><input name="internet" type="checkbox" value="yes">Internet</label>
-        <label><input name="other" type="checkbox" value="yes">Other</label>
+        <label class="indent"><input class="shadow" name="newspaper" type="checkbox" value="yes">Newspaper</label>
+        <label><input class="shadow" name="sign" type="checkbox" value="yes">Sign</label>
+        <label><input class="shadow" name="internet" type="checkbox" value="yes">Internet</label>
+        <label><input class="shadow" name="other" type="checkbox" value="yes">Other</label>
         <label class="long-name"><input class="long-name" type="text" name="other"></label><br>
-
+<!--Applicant's name(first,middle,last)-------------------------------------------------------------------------------->
         <label for="app-name">Applicant's name(first,middle,last)</label>
         <input class="long-name" id="app-name" name="app-name" type="text"><br>
         <label class="indent">Is there a co-applicant?</label>
-        <label><input name="co-app" value="yes" type="radio">yes</label>
-        <label><input name="co-app" value="no" type="radio">no</label>
+        <label><input class="shadow" name="co-app" value="yes" type="radio">yes</label>
+        <label><input class="shadow" name="co-app" value="no" type="radio">no</label>
         <em>if yes,co-applicant must submit a separate application.</em><br>
         <label class="indent" for="former-L-name">Applicant's former last name(maiden or married)</label>
         <input class="long-name" id="former-L-name" type="text" name="former-L-name"><br>
@@ -79,7 +81,7 @@
         <input class="long-name" id="mstatus" type="text" name="mstatus">
         <label for="citizen">Citizenship</label>
         <input id="citizen" type="text" name="citizen">(country)<br>
-
+<!--Emergency Contact-------------------------------------------------------------------------------------------------->
         <p>Emergency Contact:
             <label for="e-name">Name:</label>
             <input class="long-name" id="e-name" type="text" name="e-name"><br>
@@ -90,6 +92,7 @@
             <label for="ee-mail">E-mail</label>
             <input class="long-name" id="ee-mail" type="text" name="ee-mail"><br>
         </p>
+<!--Name all other person who will occupy the Property----------------------------------------------------------------->
         <p>
             Name all other person who will occupy the Property:<br>
             <label for="occ-person">Name:</label>
@@ -98,32 +101,108 @@
             <input id="occ-relation" type="text" name="occ-relation-1">
             <label for="occ-age">Age:</label>
             <input id="occ-age" type="number" name="occ-age-1"><br>
-            <label for="occ-person">Name:</label>
+            <label for="occ-person2">Name:</label>
             <input class="long-name" id="occ-person2" type="text" name="occ-person-2">
-            <label for="occ-relation">Relationship:</label>
+            <label for="occ-relation2">Relationship:</label>
             <input id="occ-relation2" type="text" name="occ-relation-2">
-            <label for="occ-age">Age:</label>
+            <label for="occ-age2">Age:</label>
             <input id="occ-age2" type="number" name="occ-age-2"><br>
-            <label for="occ-person">Name:</label>
+            <label for="occ-person3">Name:</label>
             <input class="long-name" id="occ-person3" type="text" name="occ-person-3">
-            <label for="occ-relation">Relationship:</label>
+            <label for="occ-relation3">Relationship:</label>
             <input id="occ-relation3" type="text" name="occ-relation-3">
-            <label for="occ-age">Age:</label>
+            <label for="occ-age3">Age:</label>
             <input id="occ-age3" type="number" name="occ-age-3"><br>
-            <label for="occ-person">Name:</label>
+            <label for="occ-person4">Name:</label>
             <input class="long-name" id="occ-person4" type="text" name="occ-person-4">
-            <label for="occ-relation">Relationship:</label>
+            <label for="occ-relation4">Relationship:</label>
             <input id="occ-relation4" type="text" name="occ-relation-4">
             <label for="occ-age4">Age:</label>
             <input id="occ-age4" type="number" name="occ-age-4"><br>
         </p>
-
-
-
-
-
-        <br>
-        <button>send</button>
+<!--Applicant's Current Adress------------------------------------------------------------------------------------------>
+        <p>
+            <label for="current-address">Applicant's Current Adress:</label>
+            <input class="long-name" id="current-address" type="text" name="current-address">
+            <label for="current-apt#">Apt.No.</label>
+            <input id="current-apt#" type="number" name="current-apt#"><br>
+            <label for="current-city-state-zip"><input class="indent2 p-address" id="current-city-state-zip" type="text" name="current-city-state-zip">(city,state,zip)</label><br>
+        </p>
+        <p>
+            <label class="indent" for="land-lord-name">Land lord's name:</label>
+            <input class="long-name" id="land-lord-name" type="text" name="land-lord-name">
+            <label for="land-lord-email">E-mail:</label>
+            <input id="land-lord-email" type="email" name="land-lord-email"><br>
+            <label class="indent" for="land-lord-dayphone">Phone:Day:</label>
+            <input id="land-lord-dayphone" type="number" name="land-lord-dayphone">
+            <label for="land-lord-ntphone">Nt:</label>
+            <input id="land-lord-ntphone" type="number" name="land-lord-ntphone">
+            <label for="land-lord-mbphone">Mb:</label>
+            <input id="land-lord-mbphone" type="number" name="land-lord-mbphone">
+            <label for="land-lord-fxnumber">Fax:</label>
+            <input id="land-lord-fxnumber" type="number" name="land-lord-fxnumber"><br>
+            <label class="indent" for="cu-mov-in-date">Date Moved-in</label>
+            <input id="cu-mov-in-date" type="number" name="cu-mov-in-date">
+            <label for="cu-mov-out-date">Move-Out Date</label>
+            <input id="cu-mov-out-date" type="number" name="cu-mov-out-date">
+            <label for="cu-rent-$">Rent $</label>
+            <input id="cu-rent-$" type="number" name="cu-rent-$"><br>
+            <label class="indent" for="reason-moving">Reason for move:</label>
+            <input class="p-address" id="reason-moving" type="text" name="reason-moving"><br>
+        </p>
+<!--Applicant's Previous Address--------------------------------------------------------------------------------------->
+        <p>
+            <label for="pr-address">Applicant's Previous Address:</label>
+            <input class="long-name" id="pr-address" type="text" name="pr-address">
+            <label for="pr-address-apt#">Apt.No.</label>
+            <input id="pr-address-apt#" type="number" name="pr-address-apt#"><br>
+            <label for="pr-address-city-zip"><input class="indent2 p-address" id="pr-address-city-zip" type="text" name="pr-address-city-zip">(city,state,zip)</label><br>
+        </p>
+        <p>
+            <label class="indent" for="pre-land-lord-name">Previous Land lord's name:</label>
+            <input class="long-name" id="pre-land-lord-name" type="text" name="pre-land-lord-name">
+            <label for="pre-land-lord-email">E-mail:</label>
+            <input id="pre-land-lord-email" type="email" name="pre-land-lord-email"><br>
+            <label class="indent" for="pre-land-lord-dayphone">Phone:Day:</label>
+            <input id="pre-land-lord-dayphone" type="number" name="pre-land-lord-dayphone">
+            <label for="pre-land-lord-ntphone">Nt:</label>
+            <input id="pre-land-lord-ntphone" type="number" name="pre-land-lord-ntphone">
+            <label for="pre-land-lord-mbphone">Mb:</label>
+            <input id="pre-land-lord-mbphone" type="number" name="pre-land-lord-mbphone">
+            <label for="pre-land-lord-fxnumber">Fax:</label>
+            <input id="pre-land-lord-fxnumber" type="number" name="pre-land-lord-fxnumber"><br>
+            <label class="indent" for="pre-mov-in-date">Date Moved-in</label>
+            <input id="pre-mov-in-date" type="number" name="pre-mov-in-date">
+            <label for="pre-mov-out-date">Date Moved-Out</label>
+            <input id="pre-mov-out-date" type="number" name="pre-mov-out-date">
+            <label for="pre-rent-$">Rent $</label>
+            <input id="pre-rent-$" type="number" name="pre-rent-$"><br>
+            <label class="indent" for="pre-reason-moving">Reason for move:</label>
+            <input class="p-address" id="pre-reason-moving" type="text" name="pre-reason-moving"><br>
+        </p>
+<!--Applicant's current Employer--------------------------------------------------------------------------------------->
+        <p>
+            <label for="employer">Applicant's current Employer:</label>
+            <input class="p-address" id="employer" type="text" name="employer"><br>
+            <label class="indent" for="emp-address">Address:</label>
+            <input class="p-address" id="emp-address" type="text" name="emp-address">(street,city,state,zip)<br>
+            <label class="indent" for="s-name">Supervisors's Name:</label>
+            <input id="s-name" type="text" name="s-name">
+            <label for="s-phone">Phone:</label>
+            <input id="s-phone" type="number" name="s-phone">
+            <label for="s-fax">Fax:</label>
+            <input id="s-fax" type="number" name="s-fax"><br>
+            <label class="indent" for="s-email">E-mail:</label>
+            <input id="s-email" type="email" name="s-email">
+            <label for="job-start-date">Start Date:</label>
+            <input id="job-start-date" type="number" name="job-start-date">
+            <label for="job-income">Gross Monthly Income:$</label>
+            <input id="job-income" type="number" name="job-income">
+            <label for="job-position">Position:</label>
+            <input id="job-position" type="text" name="job-position"><br>
+        </p>
+        <button>Save & Next</button>
+        <h6>(TAR-2003) 10-16-07</h6><h6 class="p-date">Page 1 of 4</h6>
     </section>
     </form>
 
