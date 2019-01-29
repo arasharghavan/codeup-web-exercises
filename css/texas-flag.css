@@ -1,0 +1,31 @@
+body{
+    background-color: lightblue;
+}
+.all-colors{
+    margin: 0;
+    float: left;
+    position: relative;
+    top: 200px; left: 200px;
+
+}
+.red{
+    width: 400px; height: 200px;
+    background-image: url("../img/red.png"); position: absolute;
+    right: -800px; top: 200px;
+}
+.with{
+    width: 400px; height: 200px;
+    background-image: url("../img/withe.png"); position: absolute;
+    right: -800px;
+}
+.blue {
+    width: 200px; height: 400px;
+    background-image: url("../img/blue.png"); position: absolute;
+    top: 0; right: -400px;
+}
+
+img{
+    width: 82%;
+    height: auto;
+    position: absolute; top: 107px; right: 6%;
+}
