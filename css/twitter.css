@@ -89,7 +89,7 @@ a {
     width: calc(50% - 1em); margin: 0 .5em 0 .5em; float: left;
 }
 .who-to-follow{
-    width: calc(25% - 1em); margin: 0 .5em 0 .5em; float: right;
+    width: calc(25% - 1em); margin: 0 .5em 0 .5em; float: left;
 }
 .container{
     margin-top: 2em;
