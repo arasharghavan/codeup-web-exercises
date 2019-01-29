@@ -2,7 +2,7 @@ body{
     background-color: lightblue;
 }
 .all-colors{
-    margin: 0;
+
     float: left;
     position: relative;
     top: 200px; left: 200px;
@@ -12,20 +12,41 @@ body{
     width: 400px; height: 200px;
     background-image: url("../img/red.png"); position: absolute;
     right: -800px; top: 200px;
+
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+
 }
 .with{
     width: 400px; height: 200px;
-    background-image: url("../img/withe.png"); position: absolute;
+    background-image: url("../img/withe.png");
+    position: absolute;
     right: -800px;
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
 }
 .blue {
     width: 200px; height: 400px;
-    background-image: url("../img/blue.png"); position: absolute;
+    background-image: url("../img/blue.png");
+    position: absolute;
     top: 0; right: -400px;
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
 }
 
 img{
     width: 82%;
     height: auto;
     position: absolute; top: 107px; right: 6%;
+}
+ul{
+    list-style: none;
+    padding: 0; margin: 0;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    overflow: hidden;
+}
+li{
+    float: left; color: #666; text-align: center;
+    padding: 14px 154px;  background-color: #f3f3f3;
+}
+li:hover{
+    background-color: #ddd;
 }
