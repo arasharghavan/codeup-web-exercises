@@ -1,0 +1,94 @@
+        /*one-half*/
+
+.one-half{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 10px;
+}
+
+.one-half>div{
+    background-color: lightgray;
+    border: solid;
+    padding: 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+        /*one-third*/
+
+.one-third{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 10px;
+}
+
+.one-third>div{
+    background-color: lightblue;
+    border: solid;
+    padding: 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+        /*one-forth*/
+
+.one-forth{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-top: 10px;
+}
+.one-forth>div{
+    background-color: lightgreen;
+    border: solid;
+    padding: 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+        /*one-sixth*/
+
+.one-sixth {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto ;
+    padding-top: 10px;
+}
+
+.one-sixth>div{
+    background-color: lightyellow;
+    border: solid;
+    padding: 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+        /*one-eighth*/
+
+.one-eighth {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    padding-top: 10px;
+}
+
+.one-eighth>div{
+    background-color: lightslategray;
+    border: solid;
+    padding: 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+        /*two-for-one one*/
+
+.two-for-one-one {
+    display: grid;
+    grid-template-columns: 25% 50% auto auto;
+    padding-top: 10px;
+}
+.two-for-one-one>div{
+    background-color: lightsalmon;
+    border: solid;
+    padding: 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
