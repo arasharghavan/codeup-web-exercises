@@ -10,7 +10,7 @@ var days = Number(little_mermaid) + Number(brother_bear) + Number(hercules);
 var price = Number(howmuch_per_day);
 var total = price * days;
 
-alert("your total amount is :$" + total + " and your total days are " + days + " days");
+alert("your total amount is :$" + total.toFixed(2) + " and your total days are " + days + " days");
 
 // next
 
