@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -12,9 +14,8 @@
 
 
             function sayHello(name) {
-            return console.log ("hello " + name);
+            return "hello, " + name;
          }
-         sayHello(Arash);
 
 /**
  * TODO:
@@ -23,18 +24,17 @@
  *
  * console.log 'helloMessage' to check your work
  */
-    sayHello("arash");
+var helloMessage = sayHello("arash");
+console.log (helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-    var myName = 'arash';
 
-    sayHello(myName);
-
-
+var myName = "arash";
+console.log (sayHello(myName));
 
 
 
@@ -62,7 +62,7 @@
  * number)
  */
     function isTwo(number) {
-    return number == 2;
+    return number === 2;
     }
 
     console.log (isTwo(2));
