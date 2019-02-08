@@ -11,10 +11,10 @@
 
 
 
-        function sayHello(name) {
-         return console.log ("hello " + name);
-    }
-
+            function sayHello(name) {
+            return console.log ("hello " + name);
+         }
+         sayHello(Arash);
 
 /**
  * TODO:
@@ -42,7 +42,7 @@
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+    var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -63,7 +63,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
     function isTwo(number) {
     return number == 2;
-}
+    }
 
     console.log (isTwo(2));
 
@@ -82,10 +82,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-//     function calculateTip(percent, amount) {
-//         return percent * amount;
-// }
-//     console.log (calculateTip(.20, 20));
+    function calculateTip(percent, amount) {
+        return percent * amount;
+    }
+    console.log (calculateTip(.20, 20));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -119,5 +119,5 @@ var random = Math.floor((Math.random() * 3) + 1);
 
     function applyDiscount(originalPrice, dicountPercent) {
         return originalPrice - (originalPrice * (dicountPercent/100));
-}
+    }
     console.log (applyDiscount(originalPrice, dicountPercent));
