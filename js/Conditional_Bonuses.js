@@ -110,31 +110,56 @@
 // - accept both abbreviations and full names of the months
 
 
-
-
- //        if (seasons === "spring"){var spring = prompt("these are the months in this season chose one! january - february - march").toLowerCase();}
- //        else if (seasons === "summer"){ var Summer = prompt("these are the months in this season chose one! april - may - june").toLowerCase();}
- //        else if (seasons === "fall"){var Fall = prompt("these are the months in this season chose one! july - august - september").toLowerCase();}
- //        else if (seasons === "winter"){var Winter = prompt("these are the months in this season chose one! october - november - december").toLowerCase();}
- //        else {alert("input is wrong");}
- // var answer;
  //
- //        function seasonToPic(sp, sum, fal, win) {
- //            if (sp.substring(0, 3) === "jan" || sp.substring(0, 3) === "feb" || sp.substring(0, 3) === "mar"){
- //                answer = sp + " my month!";
- //            } else if (sum.substring(0, 3) === "apr" || sum.substring(0, 3) === "may" || sum.substring(0, 3) === "jun"){
- //                answer = sum + " my month!";
- //            } else if (fal.substring(0, 3) === "jul" || fal.substring(0, 3) === "aug" || fal.substring(0, 3) === "sep"){
- //                answer = fal + " my month";
- //            } else if (win.substring(0, 3) === "oct" || win.substring(0, 3) === "nov" || win.substring(0, 3) === "dec"){
- //                answer = win + " my month";
- //            } else {answer = "somthing iscnwibwcvh ";}
- //         alert(answer);}
+ //    function seasonsAndMonth() {
+ //        var season = prompt("pick a season").toLowerCase();
+ //        if (season === "spring") {
+ //            var smonth = prompt("january - february - march").toLowerCase().substring(0, 3);
+ //            if (smonth === "jan") {
+ //                alert("jan");
+ //            } else if (smonth === "feb") {
+ //                alert("feb");
+ //            } else if (smonth === "mar") {
+ //                alert("mar");
+ //            } else {
+ //                alert("invalid");
+ //            }
+ //        } else if (season === "summer"){
+ //            var suMonth = prompt("april - may - june").toLowerCase().substring(0, 3);
+ //            if (suMonth === "apr") {
+ //                alert("apr");
+ //            } else if (suMonth === "may"){
+ //                alert("may");
+ //            }  else if (suMonth === "jun"){
+ //                alert("jun");
+ //            } else {alert("invalid");}
+ //        } else if (season === "fall") {
+ //            var FMonth = prompt("july - august - september").toLowerCase().substring(0, 3);
+ //            if (FMonth === "jul") {
+ //                alert("jul");
+ //            } else if (FMonth === "aug") {
+ //                alert("aug");
+ //            } else if (FMonth === "sep") {
+ //                alert("sep");
+ //            } else {
+ //                alert("invalid");
+ //            }
+ //        } else if (season === "winter") {
+ //            var Wmonth = prompt("october - november - december").toLowerCase().substring(0, 3);
+ //            if (Wmonth === "oct") {
+ //                alert("oct");
+ //            } else if (Wmonth === "nov") {
+ //                alert("nov");
+ //            } else if (Wmonth === "dec") {
+ //                alert("dec");
+ //            } else {
+ //                alert("invalid");
+ //            }
+ //        } else {alert("invalid");}
  //
+ //    }
  //
- //        seasonToPic(spring, Summer, Fall, Winter)
-
-
+ // seasonsAndMonth();
 
 
 // GOLD STAR BONUS
@@ -158,17 +183,17 @@
 //
 //     Allow unit conversion to metric system units
 
-var convertFrom = prompt("from Feet or Meters").trim().toLowerCase();
-var convertTo = prompt("to Feet or Meters").trim().toLowerCase();
-var number = prompt("enter the number");
-
-function converting(from, to, value) {
-    if (from === "feet" && to === "meters"){
-        return +value / 3.2808;
-    } else if(from === "meters" && to === "feet"){
-        return +value * 3.2808;
-    } else return false;
-} console.log(converting(convertFrom, convertTo, number));
+// var convertFrom = prompt("from Feet or Meters").trim().toLowerCase();
+// var convertTo = prompt("to Feet or Meters").trim().toLowerCase();
+// var number = prompt("enter the number");
+//
+// function converting(from, to, value) {
+//     if (from === "feet" && to === "meters"){
+//         return +value / 3.2808;
+//     } else if(from === "meters" && to === "feet"){
+//         return +value * 3.2808;
+//     } else return false;
+// } console.log(converting(convertFrom, convertTo, number));
 
 
 //
@@ -232,14 +257,14 @@ function converting(from, to, value) {
 // username is not the same as the password and the user is at least 18 years old. If the user
 // is an admin, they do not have to be a certain age but the password must still not match the
 // username.
-//     var userName = prompt("username");
-//     var password = prompt("password");
-//     var age = prompt("what is your age?");
-//     var admin = confirm("are you admin?");
-//
-//
-//     function willLoginUser(userName, password, age, admin) {
-//         if ((userName !== password) && (admin || +age >= 18)){
-//           return true;
-//         } else {return false;}
-//     } console.log (willLoginUser(userName, password, age, admin));
+    var userName = prompt("username");
+    var password = prompt("password");
+    var age = prompt("what is your age?");
+    var admin = confirm("are you admin?");
+
+
+    function willLoginUser(userName, password, age, admin) {
+        if ((userName !== password) && (admin || +age >= 18)){
+          return true;
+        } else {return false;}
+    } console.log (willLoginUser(userName, password, age, admin));
