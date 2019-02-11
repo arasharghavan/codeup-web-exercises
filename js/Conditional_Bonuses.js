@@ -112,7 +112,6 @@
 
 
 
- // var seasons = prompt("Spring, Summer, Fall, Winter. which one do you like?").toLowerCase();
  //        if (seasons === "spring"){var spring = prompt("these are the months in this season chose one! january - february - march").toLowerCase();}
  //        else if (seasons === "summer"){ var Summer = prompt("these are the months in this season chose one! april - may - june").toLowerCase();}
  //        else if (seasons === "fall"){var Fall = prompt("these are the months in this season chose one! july - august - september").toLowerCase();}
@@ -146,7 +145,8 @@
 //
 //     Prompt the user for a second unit of measurement to convert to.
 //
-//     Possibly define multiple functions to convert: inchesToFeet, feetToMiles, milesToLightYears
+//     Possibly define multiple functions to convert: inchesToFeet, feetToMiles,
+//     milesToLightYears
 // then the opposite versions: lightYearsToMiles, milesToFeet, feetToInches
 //
 // Use these conversion functions to make the correct unit conversion
@@ -157,6 +157,19 @@
 //     DOUBLE GOLD STAR BONUS
 //
 //     Allow unit conversion to metric system units
+
+var convertFrom = prompt("from Feet or Meters").trim().toLowerCase();
+var convertTo = prompt("to Feet or Meters").trim().toLowerCase();
+var number = prompt("enter the number");
+
+function converting(from, to, value) {
+    if (from === "feet" && to === "meters"){
+        return +value / 3.2808;
+    } else if(from === "meters" && to === "feet"){
+        return +value * 3.2808;
+    } else return false;
+} console.log(converting(convertFrom, convertTo, number));
+
 
 //
 // ================================= EVEN MORE FUNCTION BONUSES
