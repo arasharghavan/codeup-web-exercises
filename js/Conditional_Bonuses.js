@@ -109,28 +109,31 @@
 // - case of input should not matter
 // - accept both abbreviations and full names of the months
 
- var seasons = prompt("Spring, Summer, Fall, Winter. which one do you like?").toLowerCase();
-        if (seasons === "spring"){var spring = prompt("these are the months in this season chose one! january - february - march").toLowerCase();}
-        else if (seasons === "summer"){ var Summer = prompt("these are the months in this season chose one! april - may - june").toLowerCase();}
-        else if (seasons === "fall"){var Fall = prompt("these are the months in this season chose one! july - august - september").toLowerCase();}
-        else if (seasons === "winter"){var Winter = prompt("these are the months in this season chose one! october - november - december").toLowerCase();}
-        else {alert("input is wrong");}
- var answer;
-
-        function seasonToPic(sp, sum, fal, win) {
-            if (sp.substring(0, 3) === "jan" || sp.substring(0, 3) === "feb" || sp.substring(0, 3) === "mar"){
-                answer = sp + " my month!";
-            } else if (sum.substring(0, 3) === "apr" || sum.substring(0, 3) === "may" || sum.substring(0, 3) === "jun"){
-                answer = sum + " my month!";
-            } else if (fal.substring(0, 3) === "jul" || fal.substring(0, 3) === "aug" || fal.substring(0, 3) === "sep"){
-                answer = fal + " my month";
-            } else if (win.substring(0, 3) === "oct" || win.substring(0, 3) === "nov" || win.substring(0, 3) === "dec"){
-                answer = win + " my month";
-            } else {answer = "somthing iscnwibwcvh ";}
-         alert(answer);}
 
 
-        seasonToPic(spring, Summer, Fall, Winter)
+
+ // var seasons = prompt("Spring, Summer, Fall, Winter. which one do you like?").toLowerCase();
+ //        if (seasons === "spring"){var spring = prompt("these are the months in this season chose one! january - february - march").toLowerCase();}
+ //        else if (seasons === "summer"){ var Summer = prompt("these are the months in this season chose one! april - may - june").toLowerCase();}
+ //        else if (seasons === "fall"){var Fall = prompt("these are the months in this season chose one! july - august - september").toLowerCase();}
+ //        else if (seasons === "winter"){var Winter = prompt("these are the months in this season chose one! october - november - december").toLowerCase();}
+ //        else {alert("input is wrong");}
+ // var answer;
+ //
+ //        function seasonToPic(sp, sum, fal, win) {
+ //            if (sp.substring(0, 3) === "jan" || sp.substring(0, 3) === "feb" || sp.substring(0, 3) === "mar"){
+ //                answer = sp + " my month!";
+ //            } else if (sum.substring(0, 3) === "apr" || sum.substring(0, 3) === "may" || sum.substring(0, 3) === "jun"){
+ //                answer = sum + " my month!";
+ //            } else if (fal.substring(0, 3) === "jul" || fal.substring(0, 3) === "aug" || fal.substring(0, 3) === "sep"){
+ //                answer = fal + " my month";
+ //            } else if (win.substring(0, 3) === "oct" || win.substring(0, 3) === "nov" || win.substring(0, 3) === "dec"){
+ //                answer = win + " my month";
+ //            } else {answer = "somthing iscnwibwcvh ";}
+ //         alert(answer);}
+ //
+ //
+ //        seasonToPic(spring, Summer, Fall, Winter)
 
 
 
@@ -154,3 +157,76 @@
 //     DOUBLE GOLD STAR BONUS
 //
 //     Allow unit conversion to metric system units
+
+//
+// ================================= EVEN MORE FUNCTION BONUSES
+//
+// 1) Create a function that will return how many whitespace characters are at the beginning
+// and end of a string.
+
+    // function whitespace(input) {
+    //    return (input.length) - (input.trim()).length;
+    // } console.log (whitespace(" arash "));
+
+// 2) Create a function that takes in two string inputs. If the second string input is
+// present in the first, return the first input string with the second input string removed
+// from it. If the second string input is present multiple times in the first, the second
+// string will only be removed where it first occurs in the first string. If the second
+// string input is not present in the first, return the first string as entered in the function.
+
+    // function strings(first, second) {
+    //     return first.match(second).toString();
+    // } console.log (strings("abcdefg", "ca"));
+
+
+// 3) Create a function that takes in a string and returns true if the  letter last is an "a"
+// (otherwise, return false).
+
+    // function letter_last(input) {
+    //    return "a" === input.charAt(input.length-1);
+    // } console.log(letter_last("gggggga"));
+
+// 4) EXTRA CHALLENGE: create a function that will return how many whitespace characters are
+// at the beginning of a string (hint: use regex).
+//
+//     function whitespace(input) {
+//         return input.length - input.trimLeft().length
+//     } console.log(whitespace(" arash"));
+
+// 5) Create a function returnTrueMessage() that returns the string "Hey, it's true!"
+// Create a function returnFalseMessage() that returns the string "Hey, it's false!"
+// Create a function returnMessage() that takes in a function and returns the call to the
+// function
+// Experiement passing in different functions.
+// //
+//     function returnTrueMessage() {
+//         console.log("Hey, it's true!");
+//     }
+//
+//     function returnFalseMessage() {
+//         console.log("Hey, it's false!");
+//     }
+//
+//     function returnMessage() {
+//         returnTrueMessage();
+//         returnFalseMessage();
+//
+//     } returnMessage();
+//
+//
+// 6) Create a function, willLoginUser() that takes in a username string, password string,
+// user age, a boolean indicating if they are an admin. The function will return true if the
+// username is not the same as the password and the user is at least 18 years old. If the user
+// is an admin, they do not have to be a certain age but the password must still not match the
+// username.
+//     var userName = prompt("username");
+//     var password = prompt("password");
+//     var age = prompt("what is your age?");
+//     var admin = confirm("are you admin?");
+//
+//
+//     function willLoginUser(userName, password, age, admin) {
+//         if ((userName !== password) && (admin || +age >= 18)){
+//           return true;
+//         } else {return false;}
+//     } console.log (willLoginUser(userName, password, age, admin));
