@@ -12,10 +12,9 @@
  */
 
 
-
-            function sayHello(name) {
-            return "hello, " + name;
-         }
+  function sayHello(name) {
+     return "hello, " + name;
+  }
 
 /**
  * TODO:
@@ -24,8 +23,8 @@
  *
  * console.log 'helloMessage' to check your work
  */
-var helloMessage = sayHello("arash");
-console.log (helloMessage);
+    var helloMessage = sayHello("arash");
+        console.log (helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -33,8 +32,8 @@ console.log (helloMessage);
  * console.
  */
 
-var myName = "arash";
-console.log (sayHello(myName));
+    var myName = "arash";
+        console.log (sayHello(myName));
 
 
 
@@ -62,10 +61,10 @@ console.log (sayHello(myName));
  * number)
  */
     function isTwo(number) {
-    return number === 2;
+        return number === 2;
     }
 
-    console.log (isTwo(2));
+    // console.log (isTwo(2));
 
     console.log (isTwo(random));
 
@@ -95,10 +94,10 @@ console.log (sayHello(myName));
     var amount = prompt("your bill total");
     var percent = prompt("percentage");
 
-    function calculateTip(amount, percent) {
+    function calculateTip1(amount, percent) {
         return (amount * percent)/100;
     }
-    console.log (calculateTip(amount, percent));
+    console.log (calculateTip1(amount, percent));
 
 /**
  * TODO:
@@ -114,10 +113,10 @@ console.log (sayHello(myName));
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-    var originalPrice = prompt("originalprice?");
-    var dicountPercent = prompt("dicount amount in $?");
+    var originalPrice = prompt("original price?");
+    var discountPercent = prompt("discount amount in $?");
 
-    function applyDiscount(originalPrice, dicountPercent) {
-        return originalPrice - (originalPrice * (dicountPercent/100));
+    function applyDiscount(originalPrice, discountPercent) {
+        return originalPrice - (originalPrice * (discountPercent/100));
     }
-    console.log (applyDiscount(originalPrice, dicountPercent));
+    console.log (applyDiscount(originalPrice, discountPercent));

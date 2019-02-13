@@ -46,28 +46,28 @@
 
 
 
-    var response = confirm("would you like to enter a number?");
-    var answer;
+    var response1 = confirm("would you like to enter a number?");
+    var answer1;
     function userNumbers(input) {
 
                         if (input) {
                             var number = prompt("ok! what is the number?");
                             if (number >= 0 || number < 0) {
                                 if (number % 2 === 0) {
-                                    answer = "your number is even";
+                                    answer1 = "your number is even";
                                 } else {
-                                    answer = "your number is odd";
+                                    answer1 = "your number is odd";
                                 }
-                                alert(answer);
+                                alert(answer1);
 
                                 alert(+number + 100);
 
                                 if (number >= 0) {
-                                    answer = "your number is positive";
+                                    answer1 = "your number is positive";
                                 } else {
-                                    answer = "your number is negative";
+                                    answer1 = "your number is negative";
                                 }
-                                alert(answer);
+                                alert(answer1);
                             } else {
                                 alert("your input is not a number!!!")
                             }
@@ -76,7 +76,7 @@
                             alert("ok bye!!!");
                         }
 
-    } userNumbers(response);
+    } userNumbers(response1);
 
 
 
@@ -117,7 +117,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-    function analyzeColor(input) {
+    function analyzeColor1(input) {
         if(input ==='red'){
             console.log("blood is red");
         } else if (input ==='orange'){
@@ -135,41 +135,41 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
         } else{
             console.log("this color is not on the list");
         }
-    }   analyzeColor(randomColor);
+    }   analyzeColor1(randomColor);
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
     var userColor = prompt("what color do you like?")
-    var answer;
+    var answer2;
 
     function analyzeColor(input) {
         switch (input) {
             case 'red' :
-                answer = "blood is red";
+                answer2 = "blood is red";
                 break;
             case 'orange' :
-                answer = "orange is orange";
+                answer2 = "orange is orange";
                 break;
             case 'yellow' :
-                answer = "banana is yellow";
+                answer2 = "banana is yellow";
                 break;
             case 'green' :
-                answer = "grass is green";
+                answer2 = "grass is green";
                 break;
             case 'blue' :
-                answer = "sky is blue";
+                answer2 = "sky is blue";
                 break;
             case 'indigo' :
-                answer = "indigo is the color ";
+                answer2 = "indigo is the color ";
                 break;
             case 'violet' :
-                answer = "violet is the color";
+                answer2 = "violet is the color";
                 break;
             default :
-                answer = "i dont know about thus color";
+                answer2 = "i dont know about thus color";
         }
-        alert(answer);
+        alert(answer2);
 
     }   analyzeColor(userColor);
 
@@ -204,20 +204,20 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
     var lNumber = prompt("what is your lucky number?");
-    var tAmount = prompt("what is your total amount? $");
-    var answer;
-    function calculateTotal(lucky, bill) {
+    var tAmount3 = prompt("what is your total amount? $");
+    var answer3;
+    function calculateTotal3(lucky, bill) {
         if ((lucky >= 0) && (bill > 0 ) && (lucky <= 5)){
           if (lucky <= 1 ){
-              answer = "your bill is $" + (bill - (((lucky * 10) * bill)/100));
+              answer3 = "your bill is $" + (bill - (((lucky * 10) * bill)/100));
           } else if (lucky <= 3) {
-              answer = "your bill is $" +  (bill - ((((lucky * 10) + 5) * bill)/100));
+              answer3 = "your bill is $" +  (bill - ((((lucky * 10) + 5) * bill)/100));
           } else if(lucky === 4){
-              answer = (bill / 2);
-          } else {answer = ("you'll get all for free!.");}
+              answer3 = (bill / 2);
+          } else {answer3 = ("you'll get all for free!.");}
         } else {alert("input is wrong!!!");}
-        alert(answer);
-} calculateTotal((+lNumber), (+tAmount));
+        alert(answer3);
+} calculateTotal3((+lNumber), (+tAmount3));
 
 
 
@@ -235,16 +235,16 @@ var luckyNumber = Math.floor(Math.random() * 6);
 var tAmount = prompt("what is your total amount? $");
 
 
-var answer;
+var answer4;
 function calculateTotal(lucky, bill) {
     if ((lucky >= 0) && (bill > 0 ) && (lucky <= 5)){
         if (lucky <= 1 ){
-            answer ="your lucky number is " + lucky + " your bill before discount was $" + bill + " your bill after discount is $" + (bill - (((lucky * 10) * bill)/100));
+            answer4 ="your lucky number is " + lucky + " your bill before discount was $" + bill + " your bill after discount is $" + (bill - (((lucky * 10) * bill)/100));
         } else if (lucky <= 3) {
-            answer ="your lucky number is " + lucky + " your bill before discount was $" + bill + " your bill after discount is $" + (bill - ((((lucky * 10) + 5) * bill)/100));
+            answer4 ="your lucky number is " + lucky + " your bill before discount was $" + bill + " your bill after discount is $" + (bill - ((((lucky * 10) + 5) * bill)/100));
         } else if(lucky === 4){
-            answer ="your lucky number is " + lucky + " your bill before discount was $" + bill + " your bill after discount is $" + (bill / 2);
-        } else {answer ="your lucky number is " + lucky + " your bill before discount was $" + bill + " your bill after discount is $ 0.00" + " you'll get all for free!.";}
+            answer4 ="your lucky number is " + lucky + " your bill before discount was $" + bill + " your bill after discount is $" + (bill / 2);
+        } else {answer4 ="your lucky number is " + lucky + " your bill before discount was $" + bill + " your bill after discount is $ 0.00" + " you'll get all for free!.";}
     } else {alert("input is wrong!!!");}
-    alert(answer);
+    alert(answer4);
 } calculateTotal((+luckyNumber), (+tAmount));

@@ -1,8 +1,18 @@
-.pizza-img {
-    background-image: url("../img/pizza.png");
-}
 
-.pizza-img h1 {
-    background: white;
-    opacity: .6;
-}
+
+
+
+
+
+
+        .pizza-img {
+            background-image: url("../img/pizza.png");
+        }
+
+        .pizza-img h1 {
+            background: white;
+            opacity: .6;
+        }
+
+
+

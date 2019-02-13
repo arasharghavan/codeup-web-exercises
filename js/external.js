@@ -1,5 +1,12 @@
 "use strict";
 
+alert('Welcome to my Website!');
+
+console.log("Hello from external JavaScript");
+
+var color = prompt("What is your favorite color?");
+
+alert(color + " is my favorite color to!");
 
 var howmuch_per_day = prompt("How much is it per day?");
 var little_mermaid = prompt("How many days for Little Mermaid?");
