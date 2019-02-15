@@ -1,0 +1,136 @@
+body{
+    background-color: #f0f0f0;
+}
+
+.top-banner{
+    height: 50px;
+    width: 100%;
+}
+
+.logo{
+    width: 105px;
+    height: 105px;
+
+}
+/*header*/
+
+button, p, span{
+    font-family: 'Abel', sans-serif;
+}
+
+p.float-md-left.large-font {
+    font-size: 3em;
+}
+
+
+h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+}
+
+h3{
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+}
+
+h5{
+    font-family: 'Anton', sans-serif;
+    font-size: 28px;
+}
+
+/*big button*/
+
+.big-but{
+    border: 5px solid white;
+    height: 140px;
+    width: 140px;
+}
+
+/*img borders*/
+
+.picturebox img {
+    padding: 10px;
+    background-color: #e6e6e6;
+    border-radius: 2%;
+}
+
+
+/*small buttons-*/
+
+.abc {
+    display: none;
+}
+
+
+@media screen and (min-width:990px) {
+    .abc {
+        display: block;
+    }
+    p.float-md-left.large-font {
+        font-size: 2em;
+    }
+
+}
+
+.small{
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin: 5px 0;
+}
+
+/*break points*/
+
+.custom-abc {
+    display: none;
+}
+@media screen and (min-width:800px) {
+    .custom-abc {
+        display: block;
+    }
+    p.float-md-left.large-font {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .middle {
+        text-align: center;
+    }
+}
+
+
+
+img{
+    width: 100%;
+}
+
+
+/*fa-twitter*/
+
+.fa-twitter{
+    color: #08a1f0;
+    font-size: 2em;
+}
+
+/*header break*/
+
+
+.header-br{
+    display: none;
+}
+
+
+@media screen and (max-width:500px) {
+    .header-br {
+        display: block;
+    }
+}
+
+/*codeup design font size*/
+
+@media screen and (min-width:770px) {
+    p.float-md-left.large-font {
+        font-size:2em;
+    }
+}
