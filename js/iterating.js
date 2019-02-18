@@ -64,29 +64,18 @@
 
     var num = [1, 2, 3, 4, 5];
 
-    num.forEach(function () {
-        console.log("number" + " is: " + num[0]);
-    });
-    num.forEach(function () {
-        console.log("number" + " is: " + num[1]);
-    });
-    num.forEach(function () {
-        console.log("number" + " is: " + num[2]);
-    });
-    num.forEach(function () {
-        console.log("number" + " is: " + num[3]);
-    });
-    num.forEach(function () {
-        console.log("number" + " is: " + num[num.length - 1]);
-    });
 
-    function  first(num) {
+    function first() {
         console.log(num[0]);
-    } first(num)
+    } first(num);
 
+    function second() {
+        console.log(num[1]);
+    } second(num);
 
-
-
+    function last() {
+        console.log(num[num.length -1]);
+    }last(num);
 
 
 })();
