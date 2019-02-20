@@ -15,12 +15,12 @@
     <li data-dbid="5">Item 5</li>
 </ul>
 
-<ul>
-    <li><button id="btn1">Alert!</button></li>
-    <li><button id="btn2">background color to red?!</button></li>
-    <li><button id="btn3">cancel the background color!</button></li>
-    <li><button id="btn4">set the background color to default!</button></li>
-</ul>
+<!--<ul>-->
+    <!--<li><button id="btn1">Alert!</button></li>-->
+    <!--<li><button id="btn2">background color to red?!</button></li>-->
+    <!--<li><button id="btn3">cancel the background color!</button></li>-->
+    <!--<li><button id="btn4">set the background color to default!</button></li>-->
+<!--</ul>-->
 
 <h2 id="sub-header">Hello Again.</h2>
 <p class="sub-paragraph">
@@ -36,35 +36,35 @@
 <script>
     (function() {
 
-        var Alert = function(){
-          alert('You clicked the button!');
-        };
-
-        var Color = function () {
-            var body = document.getElementsByTagName("body")[0];
-            body.style['background-color'] = "#fe4e40";
-        };
-
-        var Reset = function () {
-            btn2.removeEventListener("click", Color);
-        };
-
-        var Default = function () {
-          var body = document.getElementsByTagName("body")[0];
-          body.style.backgroundColor = "#fff";
-        };
-
-        var btn1 = document.getElementById("btn1");
-        btn1.addEventListener("click", Alert);
-
-        var btn2 = document.getElementById("btn2");
-        btn2.addEventListener("click", Color);
-
-        var btn3 = document.getElementById("btn3");
-        btn3.addEventListener("click",Reset);
-
-        var btn4 = document.getElementById("btn4");
-        btn4.addEventListener("click", Default);
+        // var Alert = function(){
+        //   alert('You clicked the button!');
+        // };
+        //
+        // var Color = function () {
+        //     var body = document.getElementsByTagName("body")[0];
+        //     body.style['background-color'] = "#fe4e40";
+        // };
+        //
+        // var Reset = function () {
+        //     btn2.removeEventListener("click", Color);
+        // };
+        //
+        // var Default = function () {
+        //   var body = document.getElementsByTagName("body")[0];
+        //   body.style.backgroundColor = "#fff";
+        // };
+        //
+        // var btn1 = document.getElementById("btn1");
+        // btn1.addEventListener("click", Alert);
+        //
+        // var btn2 = document.getElementById("btn2");
+        // btn2.addEventListener("click", Color);
+        //
+        // var btn3 = document.getElementById("btn3");
+        // btn3.addEventListener("click",Reset);
+        //
+        // var btn4 = document.getElementById("btn4");
+        // btn4.addEventListener("click", Default);
 
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
@@ -83,12 +83,22 @@
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
-             listItems[0].style.color = "blue";
-             listItems[1].style.color = "gray";
-             listItems[3].style.color = "gray";
+        //      listItems[0].style.color = "blue";
+        //      listItems[1].style.color = "gray";
+        //      listItems[3].style.color = "gray";
+
+             for (var i = 0; i < listItems.length; i++){
+                 var dbid = listItems[i].getAttribute("data-dbid");
+                 if (dbid == 1){
+                     listItems[i].style.color = "blue";
+                 } else if (i % 2 === 0){
+                     listItems[i].style.color = "grey";
+                 }
+             }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
              var subParagraphs = document.getElementsByClassName("sub-paragraph");
+             // console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
             subParagraphs[0].innerHTML = "Mission Accomplished!";
@@ -96,3 +106,5 @@
 </script>
 </body>
 </html>
+
+
