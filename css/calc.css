@@ -1,0 +1,16 @@
+.col{
+    border: solid 2px;
+    margin: 2px;
+    background-color: grey;
+    text-align: center;
+    padding: 0;
+}
+
+button{
+    width: 100%;
+    background-color: grey;
+    border: none;
+}
+input{
+    width: 80%;
+}
