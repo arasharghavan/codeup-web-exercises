@@ -3,18 +3,18 @@
 // Write a function makeJustinMessage() that returns the string "It's Justin!" if the input to the function is the string "justin" and "It's not Justin" otherwise.
 //     If the input contains white space or numbers, return the string "INVALID INPUT".
 //
-// var name = prompt("what is your name?")
-// var answer;
-// function makeNameMessage(input) {
-//     if ((input !== input.trim()) || (!(isNaN(input)))){
-//         alert("INVALID INPUT");
-//     } else if (input === "justin"){
-//             answer = "It's Justin!";
-//          } else {answer = "It's not Justin";}
-//     alert(answer);
-//
-// } makeNameMessage(name);
-//     __
+var name = prompt("what is your name?")
+var answer;
+function makeNameMessage(input) {
+    if ((input !== input.trim()) || (!(isNaN(input)))){
+        alert("INVALID INPUT");
+    } else if (input === "justin"){
+            answer = "It's Justin!";
+         } else {answer = "It's not Justin";}
+    alert(answer);
+
+} makeNameMessage(name);
+
 // Write a function that returns a string describing the action to be taken for a given street light color input. For example, if the function input is the string "red", a message like "STOP!" could be returned from the function. Input should not be case sensitive.
 //
 //     var color = prompt("what color is the street light?").toLowerCase();
