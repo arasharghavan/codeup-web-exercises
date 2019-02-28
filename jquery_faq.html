@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <meta charset="UTF-8">
+    <title>jquery_faq</title>
+    <style>
+        .invisible{visibility: hidden}
+        .highlight{background-color: lightgray}
+    </style>
+</head>
+<body>
+
+
+
+<button class="btn">show me the list:</button>
+<dl>
+    <dt class="highlight">1</dt> <dd class="invisible">a</dd>
+    <dt class="highlight">2</dt> <dd class="invisible">b</dd>
+    <dt class="highlight">3</dt> <dd class="invisible">c</dd>
+    <dt class="highlight">4</dt> <dd class="invisible">d</dd>
+    <dt class="highlight">5</dt> <dd class="invisible">e</dd>
+    <dt class="highlight">6</dt> <dd class="invisible">f</dd>
+    <dt class="highlight">7</dt> <dd class="invisible">g</dd>
+    <dt class="highlight">8</dt> <dd class="invisible">h</dd>
+    <dt class="highlight">9</dt> <dd class="invisible">i</dd>
+    <dt class="highlight">10</dt> <dd class="invisible">j</dd>
+
+</dl>
+<script>
+    $('.btn').click(function () {
+        $('dd').toggleClass('invisible');
+    });
+
+    $('dt').click(function () {
+        $(this).toggleClass('highlight');
+    })
+</script>
+
+
+</body>
+</html>

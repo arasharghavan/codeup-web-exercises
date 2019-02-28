@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body style="background-color: black">
+
+<h1 style="text-align: center; color: gray;">Konami Code</h1>
+
+<img style="width: 100%; height: 5%" src="img/konamilogo.png" alt="konamilogo">
+<div><img class="png" style="width: 100%" src="img/konami.png" alt="konami"></div>
+<div class="png"><iframe width="100%" height="315" src="https://www.youtube.com/embed/IrGm_ckqeJA?controls=0&amp;start=9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+
+
+
+
+
+<script>
+    "use strict";
+    $('.png').css('display', 'none');
+
+
+    function KonamiCode() {
+
+        var key = '3838404037393739666513';
+        var input = "";
+
+       $(document).keyup(function (event) {
+
+                    console.log(event.keyCode);
+
+           input += ("" + event.keyCode);
+
+           if (input === key) {pic();}
+
+                    console.log(!key.indexOf(input));
+
+           if (!key.indexOf(input)){return !key.indexOf(input);}
+
+           input = ("" + event.keyCode)
+       })
+
+    }
+
+    KonamiCode();
+    
+    
+    function pic() {
+
+        $('.png').css('display','block');
+
+    }
+
+</script>
+
+</body>
+</html>
