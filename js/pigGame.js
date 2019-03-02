@@ -1,20 +1,17 @@
-/*
-GAME RULES:
 
-- The game has 2 players, playing in rounds
-- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
-- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
-- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
-- The first player to reach 100 points on GLOBAL score wins the game
 
-*/
+$(document).ready(function () {
+
+
+"use strict";
+
 
 var scores, roundScore, activePlayer, gamePlaying;
 
-//document.querySelector('.btn-new').addEventListener('click', init);
 $(".btn-new").click(function () {
     init();
 });
+
 
 init();
 
@@ -24,56 +21,42 @@ function init() {
     roundScore = 0;
     gamePlaying = true;
 
-    //document.querySelector('.dice').style.display = 'none';
+
     $(".dice").css("display","none");
-    //document.getElementById('score-0').textContent = '0';
+
     $("#score-0").text('0');
-    //document.getElementById('score-1').textContent = '0';
+
     $("#score-1").text('0');
-    //document.getElementById('current-0').textContent = '0';
+
     $("#current-0").text('0');
-    //document.getElementById('current-1').textContent = '0';
+
     $("#current-1").text('0');
 
-    //document.getElementById('name-0').textContent = prompt("name1");
+
     $("#name-0").text(prompt("Player 1:"));
-    //document.getElementById('name-1').textContent = prompt("name2");
+
     $("#name-1").text(prompt("Player 2:"));
 
-    //document.querySelector('.player-0-panel').classList.remove('winner');
     $(".player-0-panel").removeClass("winner").addClass("active");
-    // document.querySelector('.player-1-panel').classList.remove('winner');
+
     $(".player-1-panel").removeClass("winner").removeClass("active");
-    // document.querySelector('.player-0-panel').classList.remove('active');
 
-    // document.querySelector('.player-1-panel').classList.remove('active');
-
-    //document.querySelector('.player-0-panel').classList.add('active');
-    //$(".player-0-panel").addClass("active")
 }
 
 $(".btn-roll").click(function () {
 
-//})
-//document.querySelector('.btn-roll').addEventListener('click', function() {
-    if(gamePlaying === true) {
+    if(gamePlaying){
         // 1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
-
         //2. Display the result
-        //var diceDOM = document.querySelector('.dice');
-        var diceDOM = $(".dice").css("display","block");
-
-        //diceDOM.style.display = 'block';
-        diceDOM.src = 'img/dice-' + dice + '.png';
-
-
+        $(".dice").css("display","block").attr("src","img/dice-" + dice + ".png");
+        //$(".pig").css("display","block");
         //3. Update the round score IF the rolled number was NOT a 1
-        if (dice !== 1) {
+        if (dice !== 1){
             //Add score
-            roundScore += dice;
-            document.querySelector('#current-' + activePlayer).textContent = roundScore;
-        } else {
+            roundScore = roundScore + dice;
+            $("#current-" + activePlayer).text(roundScore);
+        } else{
             //Next player
             nextPlayer();
         }
@@ -81,20 +64,20 @@ $(".btn-roll").click(function () {
 });
 
 
-document.querySelector('.btn-hold').addEventListener('click', function() {
-    if (gamePlaying) {
+$(".btn-hold").click(function () {
+
+    if (gamePlaying){
         // Add CURRENT score to GLOBAL score
-        scores[activePlayer] += roundScore;
+        scores[activePlayer] = scores[activePlayer] + roundScore;
 
         // Update the UI
-        document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+        $("#score-" + activePlayer).text(scores[activePlayer]);
 
         // Check if player won the game
-        if (scores[activePlayer] >= 100) {
-            document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
-            document.querySelector('.dice').style.display = 'none';
-            document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
-            document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+        if (scores[activePlayer] >= 10){
+            $("#name-" + activePlayer).text("Winner!");
+            $(".dice").css("display","none");
+            $(".player-" + activePlayer + "-panel").removeClass("active").addClass("winner");
             gamePlaying = false;
         } else {
             //Next player
@@ -103,62 +86,20 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     }
 });
 
+
 function nextPlayer() {
     //Next player
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
 
-    document.getElementById('current-0').textContent = '0';
-    document.getElementById('current-1').textContent = '0';
+    $("current-0").text("0");
+    $("current-1").text("0");
 
-    document.querySelector('.player-0-panel').classList.toggle('active');
-    document.querySelector('.player-1-panel').classList.toggle('active');
+    $(".player-0-panel").toggleClass("active");
+    $(".player-1-panel").toggleClass("active");
+    $(".pig").toggleClass("visible");
 
-    //document.querySelector('.player-0-panel').classList.remove('active');
-    //document.querySelector('.player-1-panel').classList.add('active');
-
-    document.querySelector('.dice').style.display = 'none';
+    $(".dice").css("display","none");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
