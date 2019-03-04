@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <meta charset="UTF-8">
     <title>jquery_faq</title>
     <style>
         .invisible{visibility: hidden}
         .highlight{background-color: lightgray}
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 
-
+<div class="alert alert-success"><h1>Would you like to sign up for our newsletter?</h1><span> X </span></div>
 
 <button class="btn">show me the list:</button>
 <dl>
@@ -27,16 +27,114 @@
     <dt class="highlight">10</dt> <dd class="invisible">j</dd>
 
 </dl>
+
+<hr>
+
+<h3 id="national-parks-heading">National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+
+
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+<h3>State Parks of Texas</h3>
+<ul id="state-park-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+<button>last li in each ul have a yellow background</button>
+
+<h2><!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Do you want to register for this site?
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">thank you for ...</h4>
+                </div>
+                <div class="modal-body">
+                    Do you want to register for this site?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div></h2>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
-    $('.btn').click(function () {
-        $('dd').toggleClass('invisible');
+
+    $(document).ready(function() {
+
+        $("h3").next().hide();
+        $("h2").hide().delay(8000).fadeIn(1000);
+
+        $('.btn').click(function () {
+            $('dd').toggleClass('invisible');
+        });
+
+        $('dt').click(function () {
+            $(this).toggleClass('highlight');
+        });
+
+
+
+        $("button").click(function () {
+            $("ul").each(function (index,element) {
+                $(element).children().last().css("background-color","yellow ");
+            });
+        });
+
+        $("h3").click(function(){
+            $(this).next().children().css("font-weight","bold");
+            $(this).next().slideToggle(1000)
+        });
+
+        $("li").click(function () {
+            $(this).parent().children().first().css("color","blue")
+        });
+
+        $("span").click(function () {
+            $("h1").hide();
+        });
+
+
+
+
+
+
     });
 
-    $('dt').click(function () {
-        $(this).toggleClass('highlight');
-    })
 </script>
 
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>
