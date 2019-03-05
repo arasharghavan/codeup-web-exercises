@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax-blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>div{border: 1px solid blue; }</style>
+</head>
+<body>
+    <div id="posts"></div>
+    <button>Restart</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+$().ready(function () {
+    "use strict";
+
+    page();
+
+    function page() {
+
+       var jq = $.ajax("data/blog.json");
+
+       jq.done(function (data, status, jqxhr) {
+
+           var categories = (data[1].categories);
+           console.log(categories);
+
+           for (var i = 0; i < data.length; i++){
+
+            $("#posts").append("<div class=\"container\"><div class=\"row\"><div class=\"col-3\">"+data[i].title+"</div><div class=\"col-6\">"+data[i].categories+"</div><div class=\"col-3\">"+data[i].date+"</div></div><div class=\"row\"><div class=\"col-12\">"+data[i].content+"</div></div></div>")
+
+           }
+
+       }).fail(function (jqxhr, status, error) {
+            alert("There was an error!");
+            console.log(error)
+
+       }).always(function () {
+            alert("And we're done!");
+
+       })
+
+    }
+
+    $("button").click(function () {
+        $("#posts").html("");
+        page()
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})
+</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
