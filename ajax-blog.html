@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <title>ajax-blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style>div{border: 1px solid blue; }</style>
+    <style>
+        .row{
+            border: 1px solid gray;
+            background-color: #bbeec0;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
     <div id="posts"></div>
-    <button>Restart</button>
-
+    <div class="container"><button type="button" class="btn btn-outline-primary">Restart</button></div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
@@ -30,7 +36,7 @@ $().ready(function () {
 
            for (var i = 0; i < data.length; i++){
 
-            $("#posts").append("<div class=\"container\"><div class=\"row\"><div class=\"col-3\">"+data[i].title+"</div><div class=\"col-6\">"+data[i].categories+"</div><div class=\"col-3\">"+data[i].date+"</div></div><div class=\"row\"><div class=\"col-12\">"+data[i].content+"</div></div></div>")
+            $("#posts").append("<div class=\"container\"><div class=\"row\"><div class=\"col-3\">"+data[i].title+"</div><div class=\"col-6\">"+data[i].categories.join("-")+"</div><div class=\"col-3\">"+data[i].date+"</div></div><div class=\"row\"><div class=\"col-12\">"+data[i].content+"</div></div></div>")
 
            }
 

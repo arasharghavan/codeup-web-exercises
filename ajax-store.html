@@ -44,11 +44,10 @@ $().ready(function() {
 
             for (var i = 0; i < data.length; i++) {
 
-                $("#insertProducts").append("<tr>" + "<td>" + data[i].title + "</td>" + "<td>" + data[i].quantity + "</td>" + "<td>" + data[i].price + "</td>" + "<td>" + data[i].categories + "</td>" + "</tr>");
+                $("#insertProducts").append("<tr>" + "<td>" + data[i].title + "</td>" + "<td>" + data[i].quantity + "</td>" + "<td>" + data[i].price + "</td>" + "<td>" + data[i].categories.join(", ") + "</td>" + "</tr>");
 
             }
 
-            console.log(data);
 
 
         }).fail(function (jqxhr, status, error) {
@@ -63,7 +62,7 @@ $().ready(function() {
         $("#insertProducts").html("");
         page();
 
-    })
+    });
 
     // TODO: Take the data from inventory.json and append it to the products table
 
