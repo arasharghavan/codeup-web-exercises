@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>joke</title>
+<!--boot strap    -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--css-->
     <style>
-        div{margin: 20px 0; border-radius: 8px 0; padding: 10px}
+        div{margin: 20px 0; border-radius: 20px 0; padding: 10px}
         #content1{width: 45%;}
         .btn1 {display: none}
         .btn2 {display: none}
     </style>
+
 </head>
 <body>
 
+<!--warning bar-->
 <div id="a" class="alert alert-danger alert-dismissible fade show" role="alert">
     <strong>WARNING: </strong> some jokes may be a bit off color.
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -20,6 +24,7 @@
     </button>
 </div>
 
+<!--contetnt-->
 <div class="container">
     <div id="content"></div>
     <div id="content1"></div>
@@ -27,7 +32,7 @@
     <button class="btn2 btn btn-outline-success float-right">WAnna learn something?</button>
 </div>
 
-
+<!--Ajax-->
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
 <script>
@@ -36,11 +41,14 @@ $(function () {
 
 "use strict";
 
+// warning bar on click
     $(".close").click(function () {
        $(".btn1").css("display","inline");
        $(".btn2").css("display","inline");
     });
 
+
+// left buton function
     function lbtn() {
         var jq1 = $.get("http://api.icndb.com/jokes/random");
         jq1.done(function (data,status,jqxhr) {
@@ -51,8 +59,7 @@ $(function () {
     }
 
 
-
-
+// right button function
     function rbtn(){
         var jq2 = $.get("http://quotes.stormconsultancy.co.uk/random.json");
         jq2.done(function (data,status,jqxhr) {
@@ -65,14 +72,14 @@ $(function () {
 
 
 
-
-
+// left button on click
     $(".btn1").click(function () {
         $("#content").slideUp(400).html("");
         $("#content1").slideUp(400).html("").css("background-color","white");
         lbtn();
     });
 
+// right button on click
     $(".btn2").click(function () {
         $("#content").slideUp(400).html ("");
         $("#content1").slideUp(400);
@@ -84,7 +91,7 @@ $(function () {
 
 })
 </script>
-
+<!--boot strap-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
