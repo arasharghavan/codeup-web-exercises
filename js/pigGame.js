@@ -23,6 +23,8 @@ function init() {
 
 
     $(".dice").css("display","none");
+    $(".pig").removeClass("visible");
+    $(".pig1").addClass("visible");
 
     $("#score-0").text('0');
 
@@ -50,7 +52,7 @@ $(".btn-roll").click(function () {
         var dice = Math.floor(Math.random() * 6) + 1;
         //2. Display the result
         $(".dice").css("display","block").attr("src","img/dice-" + dice + ".png");
-        //$(".pig").css("display","block");
+
         //3. Update the round score IF the rolled number was NOT a 1
         if (dice !== 1){
             //Add score
@@ -58,7 +60,9 @@ $(".btn-roll").click(function () {
             $("#current-" + activePlayer).text(roundScore);
         } else{
             //Next player
+           alert("next player");
             nextPlayer();
+
         }
     }
 });
@@ -74,7 +78,7 @@ $(".btn-hold").click(function () {
         $("#score-" + activePlayer).text(scores[activePlayer]);
 
         // Check if player won the game
-        if (scores[activePlayer] >= 10){
+        if (scores[activePlayer] >= 30){
             $("#name-" + activePlayer).text("Winner!");
             $(".dice").css("display","none");
             $(".player-" + activePlayer + "-panel").removeClass("active").addClass("winner");
@@ -92,8 +96,8 @@ function nextPlayer() {
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
 
-    $("current-0").text("0");
-    $("current-1").text("0");
+    $("#current-0").text("0");
+    $("#current-1").text("0");
 
     $(".player-0-panel").toggleClass("active");
     $(".player-1-panel").toggleClass("active");
