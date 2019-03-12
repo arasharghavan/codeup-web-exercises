@@ -1,9 +1,7 @@
-// this
+import {niceMessage} from "./say-hello.js"
 
-// import message from "./say-hello.js"
-// console.log(nicemessage());
+console.log(niceMessage())
 
-
-// or
-import banana from "./say-hello"
-console.log(banana.nicemessage());
+// import banana from "./say-hello.js"
+//
+// console.log(banana.niceMessage())g(banana.nicemessage());

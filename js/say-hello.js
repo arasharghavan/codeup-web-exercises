@@ -1,17 +1,14 @@
+export const niceMessage = () => {
+    return "Nice message"
+}
+
+// const niceMessage = () => {
+//     return "Nice message"
+// }
+//
+// export default {niceMessage}
 
 
-// this
-  export const nicemessage = () => {
-     return "this is the message!"
- };
-
-
-
-// or
-// const nicemessage = () => {
-//     return "this is the message!"
-// };
-// export defult{nicemessage}
 
 
 
