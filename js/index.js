@@ -1,3 +1,9 @@
+// this
 
-const data = require('./say-hello.js');
-console.log(data);
+// import message from "./say-hello.js"
+// console.log(nicemessage());
+
+
+// or
+import banana from "./say-hello"
+console.log(banana.nicemessage());
