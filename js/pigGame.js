@@ -74,7 +74,7 @@ $(".btn-hold").click(function () {
         // Add CURRENT score to GLOBAL score
         scores[activePlayer] = scores[activePlayer] + roundScore;
 
-        // Update the UI
+        // Update 
         $("#score-" + activePlayer).text(scores[activePlayer]);
 
         // Check if player won the game
